@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AutoSplit
 
-## Getting Started
+> Effortless shared expenses, powered by Next.js, Convex, Clerk, and more.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- 🔒 Authentication with Clerk
+- ⚡ Real-time backend with Convex
+- 📝 Modern Next.js frontend
+- 💸 Track balances, groups, expenses, and settlements
+- 📨 Email support with Resend
+- 🤖 Gemini AI API integration
+
+---
+
+## 🖥️ Local Development Setup
+
+### 1. Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd autosplit
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development servers
+
+#### In terminal 1, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### In terminal 2, run:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npx convex dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌎 Environment Variables Reference
 
-To learn more about Next.js, take a look at the following resources:
+| Variable                           | Where to find it                                               |
+|-------------------------------------|---------------------------------------------------------------|
+| NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY  | Clerk Dashboard → API Keys → Publishable Key                  |
+| CLERK_SECRET_KEY                   | Clerk Dashboard → API Keys → Secret Key                       |
+| CONVEX_DEPLOY_KEY                  | Convex Dashboard → Settings → URL & Deploy Key → Deploy Key   |
+| CONVEX_DEPLOYMENT                  | Convex Dashboard → Settings → URL & Deploy Key → Deployment Name |
+| NEXT_PUBLIC_CONVEX_URL             | Convex Dashboard → Settings → URL & Deploy Key → API URL      |
+| NEXT_PUBLIC_CLERK_SIGN_IN_URL      | Use `/sign-in` (default)                                      |
+| NEXT_PUBLIC_CLERK_SIGN_UP_URL      | Use `/sign-up` (default)                                      |
+| CLERK_JWT_ISSUER_DOMAIN            | Clerk Dashboard → Instance Settings → Frontend API URL         |
+| RESEND_API_KEY                     | Resend Dashboard → API Keys                                   |
+| GEMINI_API_KEY                     | [Google AI Studio](https://makersuite.google.com/app/apikey)  |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Happy building! 🚀**
